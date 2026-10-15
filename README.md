@@ -2,18 +2,13 @@
 
 > **Read-only archive of released versions of datlechin/flarum-simple-tour-guide.** Not for installation: use [Packagist](https://packagist.org/packages/datlechin/flarum-simple-tour-guide) or the [upstream repository](https://github.com/datlechin/flarum-simple-tour-guide).
 
-**6** versions archived · Latest: [`v2.0.0`](https://github.com/flarchive/datlechin-flarum-simple-tour-guide/tree/archive/v2.0.0) · License: `MIT` · Flarum: `^2.0`
+**0** versions archived · Latest: [`v2.1.0`](https://github.com/flarchive/datlechin-flarum-simple-tour-guide/tree/archive/v2.1.0) · License: `MIT` · Flarum: `^2.0`
 
 ## Archived Versions
 
 | Version | Released | Flarum | Source |
 |---|---|---|---|
-| `v0.0.1` | 2023-11-23 | `^1.2.0` | [Browse](https://github.com/flarchive/datlechin-flarum-simple-tour-guide/tree/archive/v0.0.1) |
-| `v0.1.0` | 2024-06-13 | `^1.2.0` | [Browse](https://github.com/flarchive/datlechin-flarum-simple-tour-guide/tree/archive/v0.1.0) |
-| `v0.1.1` | 2024-06-13 | `^1.2.0` | [Browse](https://github.com/flarchive/datlechin-flarum-simple-tour-guide/tree/archive/v0.1.1) |
-| `v0.2.0` | 2024-06-25 | `^1.2.0` | [Browse](https://github.com/flarchive/datlechin-flarum-simple-tour-guide/tree/archive/v0.2.0) |
-| `v0.2.1` | 2024-09-19 | `^1.2.0` | [Browse](https://github.com/flarchive/datlechin-flarum-simple-tour-guide/tree/archive/v0.2.1) |
-| `v2.0.0` | 2026-09-01 | `^2.0` | [Browse](https://github.com/flarchive/datlechin-flarum-simple-tour-guide/tree/archive/v2.0.0) |
+| — | — | — | — |
 
 Catalog entry: [packages/datlechin-flarum-simple-tour-guide.json](https://github.com/flarchive/archive-index/blob/main/packages/datlechin-flarum-simple-tour-guide.json)
 
