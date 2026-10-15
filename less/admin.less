@@ -1,0 +1,267 @@
+// ---------------------------------
+// LISTS
+
+.TourList,
+.TourStepList {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  max-width: 640px;
+}
+
+.TourListItem,
+.TourStepListItem {
+  display: flex;
+  // Rows wrap, so the handle and menu sit at the top.
+  align-items: flex-start;
+  gap: 4px;
+  border-radius: var(--border-radius);
+
+  &:hover {
+    background: var(--control-bg);
+  }
+}
+
+.TourListItem-handle,
+.TourStepListItem-handle {
+  padding: 10px 4px 0 8px;
+  cursor: grab;
+  color: var(--muted-more-color);
+
+  .sortable-dragging & {
+    cursor: grabbing;
+  }
+}
+
+// The row is the button, as a tag row is on the tags page.
+.TourListItem-main,
+.TourStepListItem-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  flex: 1;
+  min-width: 0;
+  padding: 8px 4px;
+  border: 0;
+  background: none;
+  color: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+.TourListItem-title,
+.TourStepListItem-title {
+  font-weight: 600;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Wraps: an ellipsis in the middle of a selector helps nobody.
+.TourListItem-meta,
+.TourStepListItem-target {
+  font-size: 12px;
+  color: var(--muted-color);
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.TourStepListItem-target code {
+  padding: 0;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+.TourListItem--selected {
+  &,
+  &:hover {
+    background: var(--control-color);
+  }
+
+  .TourListItem-title {
+    color: var(--body-bg);
+  }
+
+  .TourListItem-meta {
+    color: var(--body-bg);
+    opacity: 0.8;
+  }
+
+  .TourListItem-handle,
+  .Button {
+    color: var(--body-bg);
+  }
+}
+
+.TourListItem--off,
+.TourStepListItem--off {
+  .TourListItem-title,
+  .TourStepListItem-title {
+    font-weight: normal;
+    color: var(--muted-color);
+  }
+}
+
+.TourListItem-warning {
+  color: var(--control-warning-color);
+
+  .icon {
+    margin-inline-end: 4px;
+  }
+}
+
+.TourListItem-controls,
+.TourStepListItem-controls {
+  padding-inline-end: 4px;
+}
+
+.TourStepListItem-flags {
+  padding-top: 10px;
+  display: flex;
+  gap: 8px;
+  color: var(--muted-color);
+}
+
+.TourList-empty,
+.TourStepList-empty {
+  margin: 0 0 12px;
+  color: var(--muted-color);
+}
+
+.TourList-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sortable-placeholder {
+  border: 2px dashed var(--control-bg);
+  border-radius: var(--border-radius);
+
+  * {
+    visibility: hidden;
+  }
+}
+
+// ---------------------------------
+// STATISTICS
+
+.TourStats-figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 20px;
+}
+
+.TourStats-figure {
+  display: flex;
+  flex-direction: column;
+}
+
+.TourStats-figure-value {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--heading-color);
+}
+
+.TourStats-figure-label {
+  font-size: 12px;
+  color: var(--muted-color);
+}
+
+.TourStats-empty {
+  margin: 0;
+  color: var(--muted-color);
+}
+
+.TourStats-steps {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  max-width: 640px;
+}
+
+.TourStats-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 0;
+  font-size: 13px;
+}
+
+.TourStats-step-title {
+  flex: 0 0 40%;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.TourStats-step-bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--control-bg);
+  overflow: hidden;
+}
+
+.TourStats-step-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--control-danger-color);
+}
+
+.TourStats-step-count {
+  min-width: 2ch;
+  text-align: end;
+  color: var(--muted-color);
+}
+
+// ---------------------------------
+// MODALS
+
+.EditTourStepModal-target {
+  display: flex;
+  gap: 8px;
+
+  .FormControl {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.EditTourStepModal-invalidTarget {
+  color: var(--error-color);
+}
+
+.EditTourStepModal-routeWarning {
+  color: var(--control-warning-color);
+}
+
+.EditTourStepModal-translation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.EditTourModal-age {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+
+  .FormControl {
+    width: 100px;
+  }
+}
+
+.EditTourModal-delete,
+.EditTourStepModal-delete {
+  margin-inline-start: auto;
+}

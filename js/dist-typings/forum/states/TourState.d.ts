@@ -1,0 +1,31 @@
+import type Tour from '../../common/models/Tour';
+import type TourStep from '../../common/models/TourStep';
+import type { TourOutcome } from '../../common/types';
+export default class TourState {
+    readonly tour: Tour;
+    readonly preview: boolean;
+    readonly steps: TourStep[];
+    element: HTMLElement | null;
+    hasPrevious: boolean;
+    ended: boolean;
+    onend: (outcome: TourOutcome, lastStep: TourStep | null) => void;
+    protected index: number;
+    protected pending: 1 | -1 | 0;
+    protected clickedSteps: Set<TourStep>;
+    constructor(tour: Tour, preview?: boolean);
+    get current(): TourStep | null;
+    get number(): number;
+    get total(): number;
+    get isLast(): boolean;
+    get awaitingClick(): boolean;
+    start(): boolean;
+    next(): void;
+    previous(): void;
+    clicked(): void;
+    sync(): void;
+    end(outcome?: TourOutcome): void;
+    protected advance(): void;
+    protected go(from: number, direction: 1 | -1): boolean;
+    protected showable(step: TourStep): boolean;
+    protected resolve(step: TourStep | null): HTMLElement | null;
+}
